@@ -6,6 +6,8 @@ import ProjectPreviewGrid from '../components/project-preview-grid'
 import SEO from '../components/seo'
 import Layout from '../containers/layout'
 import {mapEdgesToNodes, filterOutDocsWithoutSlugs} from '../lib/helpers'
+import headerimg from '../images/unilegal-blog.jpg'
+import mobileheaderimg from '../images/unilegal-blog-mobile.jpg'
 
 import {responsiveTitle1} from '../components/typography.module.css'
 
@@ -49,9 +51,20 @@ const ArchivePage = props => {
     data && data.projects && mapEdgesToNodes(data.projects).filter(filterOutDocsWithoutSlugs)
   return (
     <Layout>
-      <SEO title='Archive' />
+      <SEO title='Blogs' />
+      <div class="container1111 desktop">
+        <img src={headerimg} alt="Snow" width="1920" height="419" />
+        <div class="centered"><h1>Blogs</h1>
+          <p>Have a question? Need help with the products? Drop us a message here and we will try our best to help you!</p>
+        </div>
+      </div>
+      <div class="container1111 mobile">
+        <img src={mobileheaderimg} alt="Snow" width="1015" height="807" />
+        <div class="centered"><h1>Blogs</h1>
+          <p>Have a question? Need help with the products? Drop us a message here and we will try our best to help you!</p>
+        </div>
+      </div>
       <Container>
-        <h1 className={responsiveTitle1}>Projects</h1>
         {projectNodes && projectNodes.length > 0 && <ProjectPreviewGrid nodes={projectNodes} />}
       </Container>
     </Layout>

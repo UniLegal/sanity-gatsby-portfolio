@@ -1,27 +1,32 @@
-@import '../styles/custom-media.css';
-@import '../styles/custom-properties.css';
+@import '../styles/media-queries.css';
+@import '../styles/vars.css';
 
 .root {
   position: relative;
   z-index: 100;
+  background-color: #26272b;
+  color:white;
 }
-
 .wrapper {
-  box-sizing: border-box;
-  margin: 0 auto;
-  max-width: 960px;
-  padding: 1em;
-  display: flex;
+    box-sizing: border-box;
+    margin: 0 auto;
+    max-width: 90%;
+    padding: 1em;
+    display: flex;
 
-  @media (--media-min-small) {
-    padding: 1.5em 1.5em;
-  }
+    @media (--media-min-small) {
+        padding: 1.5em 1.5em;
+    }
+
+    @media (max-width:600px) {
+display:none;    }
 }
 
 .branding {
-  font-weight: 600;
+  font-size: inherit;
+  margin: 0;
   flex: 1;
-
+  padding-top:0;
   @nest & a {
     display: inline-block;
     padding: 0.5em;
@@ -30,7 +35,7 @@
 
     @media (hover: hover) {
       @nest &:hover {
-        color: var(--color-accent);
+        text-decoration: underline;
       }
     }
   }
@@ -44,16 +49,14 @@
   margin: 0;
   padding: calc(14 / 17 / 2 * 1rem);
   outline: none;
-  color: inherit;
 
   & svg {
     display: block;
-    fill: inherit;
   }
 
-  @media (--media-min-small) {
+@media (min-width: 600px) {
     display: none;
-  }
+}
 }
 
 .nav {
@@ -72,18 +75,17 @@
 
   @media (hover: hover) {
     @nest & ul li a:hover {
-      color: var(--color-accent);
+      text-decoration: underline;
     }
   }
 
   @media (--media-max-small) {
     position: absolute;
-    background: var(--color-white);
-    color: var(--color-black);
+    background: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
     left: 0;
     right: 0;
-    top: 4.3rem;
+    top: 4rem;
 
     @nest & ul {
       padding: 1rem 0;
@@ -94,7 +96,7 @@
     }
   }
 
-  @media (--media-min-small) {
+  @media (min-width: 600px) {
     display: block;
 
     @nest & ul {
@@ -111,4 +113,14 @@
 
 .showNav {
   display: block;
+}
+
+#headerdropdown {
+  background-color: transparent !important;
+  border: 0 !important;
+}
+
+.btn-secondary {
+  background-color: transparent !important;
+  border: 0 !important;
 }
