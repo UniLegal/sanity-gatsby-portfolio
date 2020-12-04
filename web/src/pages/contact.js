@@ -47,7 +47,28 @@ const ContactPage = props => {
                           <div class="mapleft">
 
                               <iframe src="https://www.google.com/maps/d/u/0/embed?mid=104srEPcKm871w7Ni9GNt9x_NbMuo5n93" ></iframe>                          </div>
-                              <div class="mapright">
+              <div class="mapright">
+                <Accordion
+                  title="160 Robinson Road"
+                  content="160 Robinson Road,<br/>
+#08-03 SBF Centre,<br/>
+Singapore 068914<br/><br/>
+
+Ranvir Kumar Singh<br/>
+Lai Swee Fung<br/>
+Yoong Nim Chor<br/>
+Nazim Khan<br/>
+Ng Puay Joo<br/>
+Clarence Tan<br/>
+Leonard Hazra<br/>
+Kenneth Koh<br/>
+Eric Low<br/>
+Chia Cheok Sien<br/>
+Kunal Haresh Mirpuri<br/><br/>
+Fax: +65 6226 1993<br/>
+Parking: GB Building<br/>
+MRT: Raffles Place/Tanjong Pagar (Exit F)"
+                />
                               <Accordion
                           title="6 Raffles Quay"
                                   content="6 Raffles Quay, #14-01, Singapore 048580<br/><br/>
@@ -62,23 +83,7 @@ Email: ernest.bala@ernestbala.com.sg<br/><br/>
 Parking: Available at 6 Raffles Quay<br/>
 MRT: Raffles Place  "
                               />
-                              <Accordion
-                                  title="160 Robinson Road"
-                                  content="160 Robinson Road,<br/>
-#08-03 SBF Centre,<br/>
-Singapore 068914<br/><br/>
-
-Lai Swee Fung<br/>
-Ranvir Kumar Singh<br/>
-Ng Puay Joo<br/>
-Nazim Khan<br/>
-Clarence Tan<br/>
-Yoong Nim Chor<br/>
-Leonard Hazra<br/><br/>
-Fax: +65 6226 1993<br/>
-Parking: GB Building<br/>
-MRT: Raffles Place/Tanjong Pagar (Exit F)"
-                              />
+                             
                               </div>
                               
                           </div>
@@ -102,11 +107,9 @@ MRT: Raffles Place/Tanjong Pagar (Exit F)"
                               <div>
                                   <select id="selection" name="enquirytype" placeholder="Choose Enquiry Type" onClick={colorSet} required="">
               <option value="" hidden selected="">Choose Enquiry Type</option>
-              <option value="Product Inquiries">Product Inquiries</option>
-              <option value="Warranty Support">Warranty Support</option>
-              <option value="Complains/Feedbacks">Complains/Feedbacks</option>
-              <option value="Business Opportunity">Business Opportunity</option>
-              <option value="Others">Others</option>
+                    <option value="Corporate">Corporate</option>
+                    <option value="Litigation">Litigation</option>
+                    <option value="Conveyance">Conveyance</option>
             </select>
                           </div>
                           </div>
